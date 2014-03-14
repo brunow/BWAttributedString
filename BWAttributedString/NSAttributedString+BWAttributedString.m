@@ -21,11 +21,8 @@
 @implementation NSAttributedString (BWAttributedString)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (id)attributedStringWithString:(NSString *)string
-                      properties:(void (^)(BWAttributedStringProperties *properties))propertiesBlock {
-    
-    BWAttributedStringProperties *properties = [[BWAttributedStringProperties alloc] init];
-    propertiesBlock(properties);
++ (instancetype)attributedStringWithString:(NSString *)string
+                                properties:(BWAttributedStringProperties *)properties {
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -48,6 +45,15 @@
     attributes[NSParagraphStyleAttributeName] = paragraphStyle;
     
     return [[self alloc] initWithString:string attributes:attributes];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
++ (instancetype)attributedStringWithString:(NSString *)string
+                      propertiesBlock:(void (^)(BWAttributedStringProperties *properties))propertiesBlock {
+    
+    BWAttributedStringProperties *properties = [[BWAttributedStringProperties alloc] init];
+    propertiesBlock(properties);
+    return [self attributedStringWithString:string properties:properties];
 }
 
 @end

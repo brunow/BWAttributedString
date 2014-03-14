@@ -21,7 +21,10 @@
 
 @interface NSAttributedString (BWAttributedString)
 
-+ (id)attributedStringWithString:(NSString *)string
-                      properties:(void (^)(BWAttributedStringProperties *properties))propertiesBlock;
++ (instancetype)attributedStringWithString:(NSString *)string
+                                properties:(BWAttributedStringProperties *)properties;
+
++ (instancetype)attributedStringWithString:(NSString *)string
+                           propertiesBlock:(void (^)(BWAttributedStringProperties *properties))propertiesBlock;
 
 @end

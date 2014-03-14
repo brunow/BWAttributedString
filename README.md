@@ -14,7 +14,7 @@ Or with **Cocoapods**
 
 ```objective-c
 
-self.label.attributedText = [NSAttributedString attributedStringWithString:@"Hello\nSecond line" properties:^(BWAttributedStringProperties *properties) {
+self.label.attributedText = [NSAttributedString attributedStringWithString:@"Hello\nSecond line" propertiesBlock:^(BWAttributedStringProperties *properties) {
   properties.textColor = [UIColor redColor];
   properties.font = [UIFont boldSystemFontOfSize:25];
   properties.textAlignment = NSTextAlignmentRight;
