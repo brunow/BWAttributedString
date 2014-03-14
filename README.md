@@ -8,7 +8,7 @@ Create NSAttributedString with properties.
 
 Or with **Cocoapods**
 
-	pod 'BWAttributedString', :git => "https://github.com/brunow/BWAttributedString.git", :tag => "0.1.0"
+	pod 'BWAttributedString', :git => "https://github.com/brunow/BWAttributedString.git", :tag => "0.1.2"
 
 ## Example code
 
