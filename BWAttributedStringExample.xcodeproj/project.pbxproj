@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7F7281D19053C9F005B62B6 /* BWAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAttributedString.h; sourceTree = "<group>"; };
 		E7FB70FB18CE3E2E00C94A96 /* BWAttributedStringExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWAttributedStringExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FB70FE18CE3E2E00C94A96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7FB710018CE3E2E00C94A96 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +167,7 @@
 				E7FB713518CE3E3E00C94A96 /* BWAttributedStringProperties.m */,
 				E7FB713618CE3E3E00C94A96 /* NSAttributedString+BWAttributedString.h */,
 				E7FB713718CE3E3E00C94A96 /* NSAttributedString+BWAttributedString.m */,
+				E7F7281D19053C9F005B62B6 /* BWAttributedString.h */,
 			);
 			path = BWAttributedString;
 			sourceTree = "<group>";
@@ -479,6 +481,7 @@
 				E7FB712F18CE3E2E00C94A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7FB713018CE3E2E00C94A96 /* Build configuration list for PBXNativeTarget "BWAttributedStringExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +490,7 @@
 				E7FB713218CE3E2E00C94A96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

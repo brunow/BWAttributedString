@@ -17,6 +17,39 @@
 
 #import "BWAttributedStringProperties.h"
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation BWAttributedStringProperties
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
++ (instancetype)attributedProperties {
+    return [[self alloc] init];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSDictionary *)attributes {
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    
+    if (self.backgroundColor)
+        attributes[NSBackgroundColorAttributeName] = self.backgroundColor;
+    
+    if (self.font)
+        attributes[NSFontAttributeName] = self.font;
+    
+    if (self.textColor)
+        attributes[NSForegroundColorAttributeName] = self.textColor;
+    
+    if (self.textAlignment)
+        [paragraphStyle setAlignment:self.textAlignment];
+    
+    if (self.lineSpacing)
+        [paragraphStyle setLineSpacing:self.lineSpacing];
+    
+    attributes[NSParagraphStyleAttributeName] = paragraphStyle;
+    
+    return attributes;
+}
 
 @end

@@ -15,21 +15,5 @@
 // limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface BWAttributedStringProperties : NSObject
-
-@property (nonatomic, strong) UIColor *backgroundColor;
-@property (nonatomic, strong) UIFont *font;
-@property (nonatomic, strong) UIColor *textColor;
-
-// ParagraphStyle
-
-@property (nonatomic, assign) NSTextAlignment textAlignment;
-@property (nonatomic, assign) CGFloat lineSpacing;
-
-+ (instancetype)attributedProperties;
-
-- (NSDictionary *)attributes;
-
-@end
+#import "NSAttributedString+BWAttributedString.h"
+#import "BWAttributedStringProperties.h"

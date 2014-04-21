@@ -24,27 +24,7 @@
 + (instancetype)attributedStringWithString:(NSString *)string
                                 properties:(BWAttributedStringProperties *)properties {
     
-    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    
-    if (properties.backgroundColor)
-        attributes[NSBackgroundColorAttributeName] = properties.backgroundColor;
-    
-    if (properties.font)
-        attributes[NSFontAttributeName] = properties.font;
-    
-    if (properties.textColor)
-        attributes[NSForegroundColorAttributeName] = properties.textColor;
-    
-    if (properties.textAlignment)
-        [paragraphStyle setAlignment:properties.textAlignment];
-    
-    if (properties.lineSpacing)
-        [paragraphStyle setLineSpacing:properties.lineSpacing];
-    
-    attributes[NSParagraphStyleAttributeName] = paragraphStyle;
-    
-    return [[self alloc] initWithString:string attributes:attributes];
+    return [[self alloc] initWithString:string attributes:[properties attributes]];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
